@@ -24,3 +24,20 @@ Route::get('/preview-cv', function () {
     ]);
 })->name('cv.preview');
 
+Route::get('/seed-now', function () {
+    try {
+        \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
+        \Illuminate\Support\Facades\Artisan::call('db:seed', ['--force' => true]);
+        return response()->json([
+            'status' => 'success',
+            'projects' => \App\Models\Project::count(),
+            'skills' => \App\Models\Skill::count(),
+        ]);
+    } catch (\Throwable $e) {
+        return response()->json([
+            'status' => 'error',
+            'message' => $e->getMessage(),
+        ], 500);
+    }
+});
+
