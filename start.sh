@@ -7,6 +7,9 @@ echo "Starting deployment initialization..."
 if [ -n "${RAILWAY_PUBLIC_DOMAIN}" ]; then
     export APP_URL="https://${RAILWAY_PUBLIC_DOMAIN}"
     export ASSET_URL="https://${RAILWAY_PUBLIC_DOMAIN}"
+elif [ -n "${APP_URL}" ]; then
+    export APP_URL="${APP_URL/http:\/\//https:\/\/}"
+    export ASSET_URL="${APP_URL}"
 fi
 
 # If using SQLite, create database file if it doesn't exist
@@ -15,7 +18,11 @@ if [ "${DB_CONNECTION}" = "sqlite" ] || [ -z "${DB_CONNECTION}" ]; then
     touch database/database.sqlite
 fi
 
-# Cache configuration, routes, and views for production performance
+# Clear and re-cache configuration, routes, and views for production performance
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear
+
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache
