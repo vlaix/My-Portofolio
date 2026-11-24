@@ -727,7 +727,7 @@
                 </div>
             </div>
 
-            <div class="text-center text-slate-500">
+            <div class="text-left text-slate-500">
                 <p>&copy; {{ date('Y') }} Reyvaldi Tri Hanggara Putra</p>
             </div>
         </div>
