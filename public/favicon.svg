@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Cyberpunk Yellow Badge with Chamfered Bottom-Right Corner -->
+  <polygon points="4,4 60,4 60,44 44,60 4,60" fill="#FCEE0A"/>
+  
+  <!-- Cyberpunk Cut Notch Accent (Cyan & Black) -->
+  <polygon points="44,60 60,44 60,60" fill="#050505"/>
+  <polygon points="48,60 60,48 60,60" fill="#00F0FF"/>
+  
+  <!-- Tech Circuit Line Accents -->
+  <line x1="8" y1="10" x2="22" y2="10" stroke="#050505" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="26" cy="10" r="1.5" fill="#050505"/>
+  
+  <!-- Bold Stylized Cyber Letter R -->
+  <text x="30" y="47" font-family="'Impact', 'Arial Black', -apple-system, sans-serif" font-weight="900" font-size="42" fill="#050505" text-anchor="middle">R</text>
+</svg>

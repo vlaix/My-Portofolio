@@ -6,6 +6,11 @@
     <meta name="description" content="{{ $project->title }} - Game Development Portfolio by Reyvaldi Tri Hanggara Putra // Cyberpunk 2077 Edition">
     <title>{{ $project->title }} // Reyvaldi Tri Hanggara Putra</title>
 
+    <!-- Favicon / Brand Logo in Browser Tab -->
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+
     <!-- Google Fonts: Teko (Display), Rajdhani (Cyber UI), JetBrains Mono (Tech/HUD) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
