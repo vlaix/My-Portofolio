@@ -27,8 +27,9 @@ php artisan config:cache
 php artisan route:cache
 php artisan view:cache
 
-# Run database migrations and seeders
-php artisan migrate --force --seed
+# Run database migrations and seeders explicitly
+php artisan migrate --force
+php artisan db:seed --force
 
 echo "Application ready. Starting web server on port ${PORT:-8080}..."
 php artisan serve --host=0.0.0.0 --port=${PORT:-8080}
