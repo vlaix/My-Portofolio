@@ -606,21 +606,23 @@
                         LET'S CONNECT
                     </h2>
                     <p class="text-slate-400 mt-2 text-base font-sans">
-                        Interested in discussing game development opportunities, team collaboration, or technical exploration? Send a transmission via the form or reach out directly below.
+                        Interested in discussing game development opportunities, team collaboration, or technical exploration? Reach out directly through any of the channels below.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-
-                    <!-- Left: Verified Direct Channels -->
-                    <div class="lg:col-span-5 space-y-4" data-aos="fade-right" data-aos-duration="800">
-                        <div class="p-6 bg-[#101217] border border-[#242731] border-l-4 border-l-[#00F0FF] cp-cut-br space-y-4 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
-                            <h3 class="text-base font-bold text-white tracking-widest uppercase font-cyber flex items-center gap-2">
-                                <span class="w-2 h-2 bg-[#00F0FF]"></span>
+                <div data-aos="fade-up" data-aos-duration="800">
+                    <div class="p-6 sm:p-8 bg-[#101217] border border-[#242731] border-l-4 border-l-[#00F0FF] cp-cut-br shadow-[0_0_25px_rgba(0,0,0,0.6)]">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-4 border-b border-[#242731] mb-6 gap-2">
+                            <h3 class="text-base sm:text-lg font-bold text-white tracking-widest uppercase font-cyber flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 bg-[#00F0FF]"></span>
                                 <span>DIRECT COMMUNICATION CHANNELS</span>
                             </h3>
+                            <span class="text-[10px] font-mono text-[#FCEE0A] uppercase tracking-wider">
+                                [ STATUS: READY FOR CONTACT ]
+                            </span>
+                        </div>
 
-                            <div class="space-y-2.5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                 <!-- Email (Direct to Gmail Compose) -->
                                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vlaix24@gmail.com" target="_blank" rel="noopener noreferrer"
                                    class="flex items-center gap-3 p-3 bg-black border border-[#242731] hover:border-[#FCEE0A] cp-cut-br transition-colors group">
@@ -692,117 +694,8 @@
                                         <p class="text-sm font-bold text-white truncate font-mono">@vlaaix</p>
                                     </div>
                                 </a>
-                            </div>
                         </div>
                     </div>
-
-                    <!-- Right: Functional Contact Form -->
-                    <div class="lg:col-span-7" data-aos="fade-left" data-aos-duration="800">
-                        <div class="p-6 sm:p-8 bg-[#101217] border-2 border-[#FCEE0A] cp-cut-br shadow-[0_0_30px_rgba(252,238,10,0.15)]"
-                             x-data="{ isSubmitting: false }">
-
-                            <div class="flex items-center justify-between pb-3 border-b border-[#242731] mb-5">
-                                <h3 class="text-lg font-bold text-white tracking-widest uppercase font-cyber flex items-center gap-2">
-                                    <span class="w-2.5 h-2.5 bg-[#FCEE0A]"></span>
-                                    <span>TRANSMIT MESSAGE // SEND</span>
-                                </h3>
-                                <span class="text-[10px] font-mono text-[#00F0FF] uppercase tracking-wider">
-                                    [ ENCRYPTION: TLS_v1.3 ]
-                                </span>
-                            </div>
-
-                            <p class="text-xs text-slate-400 mb-6 font-mono">
-                                Messages are stored in the system and notifications are forwarded directly to <span class="text-[#00F0FF]">vlaix24@gmail.com</span>
-                            </p>
-
-                            <!-- Success Banner -->
-                            @if(session('success'))
-                                <div class="mb-6 p-4 bg-black border-l-4 border-l-[#00F0FF] text-[#00F0FF] text-sm font-mono flex items-center gap-3 cp-cut-br">
-                                    <span class="text-base">✓</span>
-                                    <span>{{ session('success') }}</span>
-                                </div>
-                            @endif
-
-                            <!-- Error Banner -->
-                            @if($errors->any())
-                                <div class="mb-6 p-4 bg-black border-l-4 border-l-[#FF003C] text-[#FF003C] text-sm font-mono cp-cut-br">
-                                    <ul class="list-disc list-inside space-y-1">
-                                        @foreach($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
-
-                            <form action="{{ route('contact.send') }}"
-                                  method="POST"
-                                  @submit="isSubmitting = true"
-                                  class="space-y-4">
-                                @csrf
-
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div class="space-y-1.5">
-                                        <label for="name" class="block text-xs text-[#FCEE0A] font-mono uppercase font-bold tracking-wider">
-                                            Full Name *
-                                        </label>
-                                        <input type="text"
-                                               name="name"
-                                               id="name"
-                                               required
-                                               value="{{ old('name') }}"
-                                               placeholder="Your Name"
-                                               class="w-full px-3.5 py-3 bg-black border border-[#242731] text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#00F0FF] focus:shadow-[0_0_15px_rgba(0,240,255,0.3)] cp-cut-br font-mono">
-                                    </div>
-
-                                    <div class="space-y-1.5">
-                                        <label for="email" class="block text-xs text-[#FCEE0A] font-mono uppercase font-bold tracking-wider">
-                                            Email Address *
-                                        </label>
-                                        <input type="email"
-                                               name="email"
-                                               id="email"
-                                               required
-                                               value="{{ old('email') }}"
-                                               placeholder="email@example.com"
-                                               class="w-full px-3.5 py-3 bg-black border border-[#242731] text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#00F0FF] focus:shadow-[0_0_15px_rgba(0,240,255,0.3)] cp-cut-br font-mono">
-                                    </div>
-                                </div>
-
-                                <div class="space-y-1.5">
-                                    <label for="subject" class="block text-xs text-[#FCEE0A] font-mono uppercase font-bold tracking-wider">
-                                        Subject
-                                    </label>
-                                    <input type="text"
-                                           name="subject"
-                                           id="subject"
-                                           value="{{ old('subject') }}"
-                                           placeholder="Game project discussion / collaboration opportunity"
-                                           class="w-full px-3.5 py-3 bg-black border border-[#242731] text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#00F0FF] focus:shadow-[0_0_15px_rgba(0,240,255,0.3)] cp-cut-br font-mono">
-                                </div>
-
-                                <div class="space-y-1.5">
-                                    <label for="message" class="block text-xs text-[#FCEE0A] font-mono uppercase font-bold tracking-wider">
-                                        Message *
-                                    </label>
-                                    <textarea name="message"
-                                              id="message"
-                                              rows="4"
-                                              required
-                                              placeholder="Describe your project needs or discussion topic..."
-                                              class="w-full px-3.5 py-3 bg-black border border-[#242731] text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#00F0FF] focus:shadow-[0_0_15px_rgba(0,240,255,0.3)] cp-cut-br font-mono resize-y">{{ old('message') }}</textarea>
-                                </div>
-
-                                <button type="submit"
-                                        :disabled="isSubmitting"
-                                        class="w-full py-4 px-6 text-sm font-black uppercase tracking-widest text-black bg-[#FCEE0A] hover:bg-[#00F0FF] disabled:opacity-50 cp-cut-br transition-all duration-200 shadow-[0_0_20px_rgba(252,238,10,0.35)] hover:shadow-[0_0_25px_rgba(0,240,255,0.5)] flex items-center justify-center gap-2">
-                                    <span x-show="!isSubmitting">TRANSMIT MESSAGE // SEND</span>
-                                    <span x-show="isSubmitting" x-cloak>TRANSMITTING DATA...</span>
-                                    <span class="font-mono text-xs">►</span>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
@@ -834,9 +727,8 @@
                 </div>
             </div>
 
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-500">
-                <p>&copy; {{ date('Y') }} Reyvaldi Tri Hanggara Putra. All rights reserved.</p>
-                <p class="text-slate-400">Electronic Engineering Polytechnic Institute of Surabaya (PENS) • SMAN 02 Jember</p>
+            <div class="text-center text-slate-500">
+                <p>&copy; {{ date('Y') }} Reyvaldi Tri Hanggara Putra</p>
             </div>
         </div>
     </footer>

@@ -462,7 +462,7 @@
     <!-- Footer -->
     <footer class="border-t border-[#242731] py-8 bg-black mt-20 font-mono text-xs text-slate-500">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
-            <p>&copy; {{ date('Y') }} Reyvaldi Tri Hanggara Putra. Electronic Engineering Polytechnic Institute of Surabaya (PENS) • SMAN 02 Jember.</p>
+            <p>&copy; {{ date('Y') }} Reyvaldi Tri Hanggara Putra</p>
             <p class="text-[10px] text-slate-600 uppercase tracking-widest">// NIGHT CITY ARCHIVES // UNITY ENGINE 2077</p>
         </div>
     </footer>
