@@ -12,10 +12,12 @@ elif [ -n "${APP_URL}" ]; then
     export ASSET_URL="${APP_URL}"
 fi
 
-# If using SQLite, create database file if it doesn't exist
-if [ "${DB_CONNECTION}" = "sqlite" ] || [ -z "${DB_CONNECTION}" ]; then
-    mkdir -p database
+# Ensure SQLite file exists
+mkdir -p database
+if [ ! -f "database/database.sqlite" ]; then
     touch database/database.sqlite
+    php artisan migrate --force
+    php artisan db:seed --force
 fi
 
 # Clear and re-cache configuration, routes, and views for production performance
