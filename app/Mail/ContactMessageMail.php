@@ -29,7 +29,12 @@ class ContactMessageMail extends Mailable
      */
     public function envelope(): Envelope
     {
+        $fromAddress = config('mail.from.address') && config('mail.from.address') !== 'hello@example.com'
+            ? config('mail.from.address')
+            : (env('MAIL_USERNAME') ?: 'vlaix24@gmail.com');
+
         return new Envelope(
+            from: new Address($fromAddress, config('mail.from.name') ?: 'Reyvaldi Portfolio Contact'),
             replyTo: [
                 new Address($this->contactEmail, $this->contactName),
             ],

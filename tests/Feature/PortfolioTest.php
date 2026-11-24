@@ -37,7 +37,7 @@ class PortfolioTest extends TestCase
         $response->assertSee('Game Technology');
         $response->assertSee('2024 - Now');
         $response->assertSee('3.63');
-        $response->assertSee('mailto:vlaix24@gmail.com');
+        $response->assertSee('vlaix24@gmail.com');
         $response->assertSee('https://wa.me/6289676682773');
         $response->assertSee('https://github.com/vlaix');
         $response->assertSee('https://vlaixx.itch.io/');

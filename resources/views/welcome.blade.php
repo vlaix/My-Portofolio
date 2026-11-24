@@ -621,8 +621,8 @@
                             </h3>
 
                             <div class="space-y-2.5">
-                                <!-- Email -->
-                                <a href="mailto:vlaix24@gmail.com" target="_blank" rel="noopener noreferrer"
+                                <!-- Email (Direct to Gmail Compose) -->
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vlaix24@gmail.com" target="_blank" rel="noopener noreferrer"
                                    class="flex items-center gap-3 p-3 bg-black border border-[#242731] hover:border-[#FCEE0A] cp-cut-br transition-colors group">
                                     <div class="w-9 h-9 bg-[#101217] text-[#00F0FF] flex items-center justify-center shrink-0 cp-cut-br group-hover:bg-[#00F0FF] group-hover:text-black transition-colors">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
